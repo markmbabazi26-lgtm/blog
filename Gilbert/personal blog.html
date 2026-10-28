@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ssekatawa Gilbert — Cybersecurity Analyst & AI Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables: Futuristic Tech Theme */
+        :root {
+            --bg-color: #050814;
+            --card-bg: #0b1120;
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #a855f7;
+            --border-color: #1e293b;
+            --glow-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+            --font-main: 'Inter', sans-serif;
+            --font-code: 'Fira Code', monospace;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Subtle Cyber Grid Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(30, 41, 59, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.2) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background-color: rgba(5, 8, 20, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-code);
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-purple);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px 0;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text h1 span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .typing-container {
+            font-family: var(--font-code);
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            min-height: 30px;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: #050814;
+            box-shadow: var(--glow-shadow);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Hero Visual / Image Card Placeholder */
+        .hero-image-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: 100%;
+            max-width: 380px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .profile-img-box {
+            width: 100%;
+            height: 340px;
+            background: #111827;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .placeholder-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 1rem;
+            font-family: var(--font-code);
+        }
+
+        /* Section Commons */
+        section {
+            padding: 100px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        /* About & Skills */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .skills-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .skills-category h4 {
+            font-size: 1rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.75rem;
+            font-family: var(--font-code);
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            font-size: 0.8rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-family: var(--font-code);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-shadow);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-purple);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-purple);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem;
+            border-radius: 6px;
+            color: var(--text-color);
+            font-family: var(--font-main);
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-family: var(--font-code);
+        }
+
+        /* Responsive */
+        @media (max-width: 868px) {
+            .hero-grid, .grid-2, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-text h1 {
+                font-size: 2.25rem;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">Ssekatawa.Gilbert<span>()</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Securing Systems. <span>Building Intelligent Solutions.</span></h1>
+                <div class="typing-container" id="typing-text"></div>
+                <p class="hero-desc">Analytical systems engineer specializing in robust cybersecurity architectures, penetration testing protocols, and autonomous AI development workflows.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                <div class="profile-card">
+                   <div class="profile-img-box">
+    <img src="gilbert.jpg" alt="Ssekatawa Gilbert">                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me & Skills Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About & Technical Stack</h2>
+                <p>Bridging secure defensive frameworks with modern software development.</p>
+            </div>
+            
+            <div class="grid-2">
+                <div class="about-text">
+                    <p>I am <strong>Ssekatawa Gilbert</strong>, a security-focused developer and systems designer driven by complex infrastructural puzzles and clean code standards.</p>
+                    <p>My core focus lies in identifying vulnerabilities, building secure network perimeters, and developing streamlined automation agents that solve real-world operational bottlenecks.</p>
+                    <p>Whether auditing a network or deploying custom software architectures, my approach combines technical precision with minimal, efficient execution.</p>
+                </div>
+
+                <div id="skills">
+                    <div class="skills-category">
+                        <h4>Cybersecurity</h4>
+                        <div class="skills-tags">
+                            <span class="tag">Network Security</span>
+                            <span class="tag">Penetration Testing</span>
+                            <span class="tag">Risk Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h4>AI & Development</h4>
+                        <div class="skills-tags">
+                            <span class="tag">AI Agents</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skills-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Html</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h4>Tools & Infrastructure</h4>
+                        <div class="skills-tags">
+                            <span class="tag">Wireshark</span>
+                            <span class="tag">Metasploit</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">XAMPP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Selected works highlighting engineering capability and security applications.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <h3>Motor Spare Parts Advertising System</h3>
+                        <p>A structured inventory and advertising portal designed to connect automobile part suppliers with buyers efficiently, built with secure backend databases and robust search queries.</p>
+                    </div>
+                    <span class="tag">PHP / MySQL / XAMPP</span>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <h3>AI Automation Bots & Agents</h3>
+                        <p>Autonomous task-execution scripts and conversational API wrappers configured to automate routine information gathering and client interaction pipelines.</p>
+                    </div>
+                    <span class="tag">Python / APIs</span>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <h3>Vulnerability Assessment Toolkits</h3>
+                        <p>A suite of network traffic analyzers and diagnostic mini-scripts configured to test local environment resilience and track protocol anomalies.</p>
+                    </div>
+                    <span class="tag">Python / Wireshark / Security</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Services</h2>
+                <p>Professional engineering and analytical solutions tailored for clients and teams.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Cybersecurity Consulting</h3>
+                    <p>Network auditing, risk evaluations, and hardening systems against prospective vulnerabilities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI Agent Development</h3>
+                    <p>Building automated agents, workflow connectors, and intelligent bot integrations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Website & Web Apps</h3>
+                    <p>Clean, minimal, highly responsive web interfaces and secure backend implementations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Student Tech Support & Tutoring</h3>
+                    <p>Guiding students through complex programming concepts, C/Java/Python logic, and system setups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Initiate Connection</h2>
+                <p>Available for consultations, projects, and security analysis inquiries.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Transmission simulated. Thank you for reaching out!');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Ssekatawa Gilbert">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="Sed@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message Payload</label>
+                        <textarea id="message" rows="4" required placeholder="Project details or inquiry..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Message</button>
+                </form>
+
+                <div>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">You can also reach out or review my code repositories directly via the channels below:</p>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-btn">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" class="social-btn">LinkedIn</a>
+                        <a href="https://whatsapp.com" target="_blank" class="social-btn">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ssekatawa Gilbert. All systems secure & operational.</p>
+        </div>
+    </footer>
+
+    <!-- Typing Effect Script -->
+    <script>
+        const words = ["Cybersecurity Analyst", "AI Agent Developer", "Systems Engineer"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typing-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typing-text').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
+    </script>
+</body>
+</html>
