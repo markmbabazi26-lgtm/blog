@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Ssekatawa Gilbert portrait placeholder</title>
+  <desc id="desc">Abstract dark profile illustration for a cybersecurity and AI portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="700" fill="url(#bg)"/>
+  <circle cx="300" cy="220" r="120" fill="#1e293b" stroke="url(#accent)" stroke-width="6"/>
+  <circle cx="300" cy="185" r="58" fill="#dbeafe" opacity="0.9"/>
+  <path d="M182 548c19-76 78-120 118-120s99 44 118 120" fill="#1e293b" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M230 260C250 230 270 214 300 214c30 0 50 16 70 46" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+  <rect x="84" y="84" width="432" height="532" rx="28" fill="none" stroke="rgba(56,189,248,0.25)" stroke-dasharray="10 12"/>
+</svg>
