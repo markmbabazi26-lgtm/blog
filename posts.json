@@ -1,0 +1,41 @@
+[
+  {
+    "id": "welcome-to-our-class-blog",
+    "title": "Welcome to our class blog",
+    "category": "Community",
+    "date": "2026-11-20",
+    "author": "Class Blog Team",
+    "excerpt": "A shared space for the people, ideas and moments that make our class journey memorable.",
+    "paragraphs": [
+      "Welcome to our class blog — a digital home for our community. This space brings our member profiles, stories and shared memories together in one place.",
+      "The goal is simple: celebrate each person's individuality, make room for different voices and keep a record of the ideas and experiences we choose to share.",
+      "Explore the member profiles, browse the gallery and check back as new articles are added. This is our story, and it grows whenever someone contributes."
+    ]
+  },
+  {
+    "id": "why-teamwork-matters",
+    "title": "Why teamwork matters in student life",
+    "category": "Learning",
+    "date": "2026-11-20",
+    "author": "Class Blog Team",
+    "excerpt": "Good teamwork helps students share ideas, learn from different perspectives and reach common goals.",
+    "paragraphs": [
+      "Teamwork is an important part of student life. Group activities give learners a chance to combine their strengths, exchange ideas and work towards a shared result.",
+      "Effective teamwork starts with communication. Listening carefully, sharing responsibilities and respecting different opinions help a group make better decisions.",
+      "When every member contributes, the whole team benefits. The skills developed through collaboration — patience, accountability and problem-solving — are useful far beyond the classroom."
+    ]
+  },
+  {
+    "id": "learning-through-technology",
+    "title": "Learning through technology",
+    "category": "Technology",
+    "date": "2026-11-20",
+    "author": "Class Blog Team",
+    "excerpt": "How digital tools can support research, creativity and collaboration in education.",
+    "paragraphs": [
+      "Technology gives students new ways to explore information, practise skills and present their ideas. A well-chosen digital tool can make a lesson more interactive and help a group collaborate even when members are apart.",
+      "The most useful approach is to start with the learning goal, then choose a tool that supports it. Students should also check the reliability of online information and protect their personal details.",
+      "Used thoughtfully, technology can support curiosity and lifelong learning. It works best alongside discussion, practice and the guidance of teachers."
+    ]
+  }
+]
